@@ -8,7 +8,7 @@ resource "aws_s3_bucket" "app_bucket" {
   bucket = "${var.app_name}-${var.environment}-sksri"
   
   tags = {
-    Name        = "${var.app_name}-${var.environment}-sksri"
+    Name        = "${var.app_name}-${var.environment}-ag"
     Environment = var.environment
   }
 }
