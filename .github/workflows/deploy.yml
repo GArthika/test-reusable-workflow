@@ -1,0 +1,15 @@
+name: Deploy Application
+on: 
+  push: 
+    branches: 
+      - main
+jobs:
+  deploy:
+    uses: GArthika/reusable-workflow/.github/workflows/terraform-docker.yml@main
+
+    with:
+      environment: production
+    secrets:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      
