@@ -5,7 +5,7 @@ provider "aws" {
 
 # Create an S3 bucket for your application assets
 resource "aws_s3_bucket" "app_bucket" {
-  bucket = "${var.app_name}-${var.environment}-sksri"
+  bucket = "${var.app_name}-${var.environment}-ag"
   
   tags = {
     Name        = "${var.app_name}-${var.environment}-ag"
